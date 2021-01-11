@@ -1,0 +1,270 @@
+
+<!--
+<html>
+<head>
+	<title>Assignment 7</title>
+</head>
+
+<body>
+	<h3 >1.WAP to illustrate implementation of functions in javascript</h3>
+	<p id = "demo2"> </p> <br>
+	<p id = "demo3"> </p>
+	<button type="button" onclick="myfunction3()">click me</button>
+	<script> 
+	function myfunction(p1 , p2)
+	{
+		return p1*p2;
+	}
+	function myfunction1(a , b)
+	{
+		return a+b;
+	}
+	function myfunction3()
+	{
+		document.getElementById("demo2").innerHTML = myfunction(4,3);
+	    document.getElementById("demo3").innerHTML = myfunction1(4,3);
+	}
+	
+	</script>
+
+</body>
+
+</html>
+-->
+<!-- ======================================================================= -->
+
+<!--
+<html>
+<head>
+	<title>Assignment 7</title>
+</head>
+
+<body>
+	<h3 >2.WAP to illustrate the declaration of object, assignment of value and display it.</h3>
+	<p id = "demo2"> </p> 
+	<script>
+		//create and display variable
+		var name = 'Nikita';
+		document.getElementById('demo2').innerHTML = name ;
+		
+		//create an object
+		var student = {name : "Nikita" , roll : " 101" , result : "pass"} ;
+		document.getElementById('demo2').innerHTML = "Student name is " + student.name + " Roll no. is : " + 
+		student.roll ;
+		
+	</script>
+
+</body>
+
+</html>
+-->
+
+<!-- ======================================================================= -->
+<!--
+<html>
+<head>
+	<title>Assignment 7</title>
+</head>
+
+<body>
+	<h3 >3.WAP to illustrate declaration of array , assignment of value to an array and display it.</h3>
+	<p id = "demo2"> </p> 
+	
+	<script>
+		
+		
+		//create an array
+		var student = [ "Nikita" , "Nakshatra" , "Kiran" , "Naman"] ;
+		
+		//display array
+		//document.getElementById('demo2').innerHTML =  "first element of array : "+student[0];
+		document.getElementById('demo2').innerHTML =  student;
+		
+		
+		
+	</script>
+
+</body>
+
+</html>
+-->
+<!-- ======================================================================= -->
+<!--
+<html>
+<head>
+	<title>Assignment 7</title>
+	
+</head>
+
+<body>
+	<h3 >4.Write a javascript function named is_integer which checks if the passed argument is an integer.
+             You can use any mathematical operator or functions defined in the Math object.</h3>
+	
+	
+	<script >
+	
+		function is_integer(num)
+		{
+			document.write(Number.isInteger(num)+"<br>") ;
+			//document.getElementById("demo").innerHTML = `${result}`;
+		}
+		is_integer(11);
+		is_integer(11.90);
+	</script>
+
+</body>
+
+</html>
+-->
+<!-- ====================================================================== -->
+<!--
+
+<html>
+<head>
+	<title>Assignment 7</title>
+	
+</head>
+
+<body>
+	<h3 >5.Using the forEach function defined for an array, find the sum of the array of numbers. [ function
+      add_all(arr) {...} ]</h3>
+	
+	<p id = "demo"></p> 
+	
+	<script >
+		var arr = [ 10 , 20 , 45 , 33];
+		var sum = 0;
+		arr.forEach(add_all);
+			
+			function add_all(value)
+			{
+				sum += value;
+				return sum;
+			}
+				document.write(add_all() +"<br>");
+	</script>
+
+</body>
+
+</html>
+-->
+<!-- ====================================================================== -->
+<!--
+<html>
+<head>
+	<title>Assignment 7</title>
+	
+</head>
+
+<body>
+	<h3 >6.Write a JavaScript program to convert temperatures to and from celsius, fahrenheit. [ Use the
+       formula : c/5 = (f-32)/9, where c = temperature in celsius and f = temperature in fahrenheit]</h3>
+	
+	<p id = "demo"></p> 
+	<p id = "demo1"></p>
+	
+	<input type="" alt="" id="res" />C <br><br>
+	<button onclick="fun1()"> Convert </button>
+	<br><br>
+	<input type="" alt="" id="res1" />F <br><br>
+	<button onclick="fun2()"> Convert </button>
+	
+	<script >
+		function fun1()
+		{
+			var c = document.getElementById("res").value;
+			var f = ( c * 1.8) + 32;
+			document.getElementById("demo").innerHTML = `${c} C = ${f}F `  ;
+		}	
+
+		function fun2()
+		{
+			var f = document.getElementById("res1").value;
+			var c = (f-32)/1.8;
+			document.getElementById("demo1").innerHTML = `${f} F = ${c}C `  ;
+		}		
+	</script>
+
+</body>
+
+</html>
+
+<!-- ====================================================================== -->
+
+<html>
+<head>
+	<title>Assignment 7</title>
+	
+</head>
+
+<body>
+	<h3 >7.Write a factorial function that returns the factorial of a given number, n. Make sure you return the
+calculated value and not just print it. [ function factorial(n){...} ]</h3>
+	
+	<p id = "demo"></p> 
+	
+	<script >
+		function Factorial(num)
+		{
+			var f = 1;
+			for(var i = num ; i > 0 ; i-- )
+			f  = f * i ;
+				return f;			 
+		
+		}
+		var total = Factorial(5);
+		document.write("<h2>"+ total+"</h2>" ) ;
+	</script>
+
+</body>
+
+</html>
+
+</html>
+
+<!-- ====================================================================== -->
+
+<html>
+<head>
+	<title>Assignment 7</title>
+	
+</head>
+
+<body>
+	<h3 >8.Write a javascript function that converts a given amount of money into coins of denominations (1,
+2, 5, 10 and 25). [ function convert_to_coins(amount) {...} ]. You may choose to print the coin
+denominations used on the console. E.g. convert_to_coins(87) should print 25 25 25 10 2.</h3>
+	
+	<p id = "demo"></p> 
+	
+	<script >
+		function convert_to_coins(amount,coin)
+		{
+		  if(amount===0)
+			{
+			  return [];
+			}
+		  else
+			{
+			  if(amount>=coin[0])
+				{
+				  x=(amount-coin[0]);
+				  document.write(coin[0]+" ");
+				  return [coin[0]].concat(convert_to_coins(x,coin));
+				}
+			  else
+				{
+				  coin.shift();
+				  return convert_to_coins(amount,coin);
+				}
+			}
+		}
+		coin = [ 25 , 10 , 5 , 2 , 1 ];
+		convert_to_coins( 87 , coin);
+	</script>
+
+</body>
+
+</html>
+
+<!-- ====================================================================== -->
